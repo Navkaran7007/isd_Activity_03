@@ -1,7 +1,7 @@
 """This module defines the PartialPaymentStrategy class."""
 
-__author__ = ""
-__version__ = ""
+__author__ = "Navkaran Singh Sidhu"
+__version__ = "1.0.0"
 
 from billing_account.billing_account import BillingAccount
 from patterns.strategy.payment_strategy import PaymentStrategy
@@ -22,8 +22,10 @@ class PartialPaymentStrategy(PaymentStrategy):
         balance = account.get_balance(payee)
 
         if balance <= 0.0:
-            message = f"Processed payment of ${amount:,.2f}. New balance: ${balance:,.2f}."
+            message = f"Processed payment of ${amount:,.2f}."\
+                     + f" New balance: ${balance:,.2f}."
         else:
-            message =  f"Partial payment of ${amount:,.2f} accepted. New balance: ${balance:,.2f}."
+            message =  f"Partial payment of ${amount:,.2f} accepted." \
+                     + f" New balance: ${balance:,.2f}."
 
         return message
