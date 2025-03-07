@@ -10,6 +10,8 @@ from payee.payee import Payee
 
 class PaymentStrategy(ABC):
     """
+    class PaymentStrategy: Maintains the payments.
+
     """
     @abstractmethod
     def process_payment(self, 
@@ -17,5 +19,14 @@ class PaymentStrategy(ABC):
                         payee: Payee, 
                         amount: float)-> str:
         """
+        An abstract method for a payment from a billing account.
+        
+        Args:
+            account (BillingAccount): The billing 
+                account for payment.
+            payee (Payee): The payee to which the process 
+                payment applies.
+            amount (float): The amount to be paid.
+
         """
         pass

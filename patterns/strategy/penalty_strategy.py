@@ -9,11 +9,26 @@ from payee.payee import Payee
 
 class PenaltyStrategy(PaymentStrategy):
     """
+    A subclass of PaymentStrategy.
+
     """
     def process_payment(self, 
                         account:BillingAccount, 
                         payee: Payee, 
                         amount: float)-> str:
+        """
+        Process a payment from a billing account to a payee.
+        
+        Args:
+            account (BillingAccount): The billing account from 
+                which the payment is made.
+            payee (Payee): The payee to which the amount applies.
+            amount (float): The amount to be paid.
+
+        Returns:
+            str: A message of the payment.
+
+        """
         # Apply a payment to the account:
         account.deduct_balance(payee, amount)
 

@@ -6,8 +6,12 @@ This activity will help to reinforce learning of the Module 3 concepts of:
 
 ## Author
 
-[Your name]
+Navkaran Singh Sidhu
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+## Additional Information
+
+- Payment class: Manages payment processing by selected payment strategy.
+- PenaltyStrategy class: Implements a strategy that adds a $10 penalty for payments not covering the   full balance.
+- PartialPaymentStrategy class: Implements a strategy that accepts partial payments without penalties.

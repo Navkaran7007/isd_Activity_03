@@ -10,11 +10,28 @@ from payee.payee import Payee
 
 class PartialPaymentStrategy(PaymentStrategy):
     """
+    A payment strategy for partial payments. 
+
     """
     def process_payment(self, 
                         account: BillingAccount, 
                         payee: Payee, 
                         amount: float )-> str:
+        """
+        Initializes the class attributes with argument values.
+       
+        Args:
+            account (BillingAccount): The billing account 
+                from which the payment will get deducted.
+            payee (Payee): The payee to which the process 
+                payment applies.
+            amount (float): The amount to be deducted 
+                from the billing account.
+        
+        Returns:
+            str: The message  string.
+
+        """
         # Apply a payment to the account:
         account.deduct_balance(payee, amount)
 
